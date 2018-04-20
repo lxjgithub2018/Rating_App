@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Rating_App.iml" filepath="$PROJECT_DIR$/Rating_App.iml" />
+      <module fileurl="file://D:\WorkFile\GitHub\Rating\Rating_App\Rating_App.iml" filepath="D:\WorkFile\GitHub\Rating\Rating_App\Rating_App.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\WorkFile\GitHub\Rating\Rating_App\app\app.iml" filepath="D:\WorkFile\GitHub\Rating\Rating_App\app\app.iml" />
     </modules>
   </component>
 </project>

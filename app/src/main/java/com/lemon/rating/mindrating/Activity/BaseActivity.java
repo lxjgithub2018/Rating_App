@@ -1,4 +1,4 @@
-package com.lemon.rating.rating_app.Activity;
+package com.lemon.rating.mindrating.Activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

@@ -1,4 +1,4 @@
-package com.lemon.rating.rating_app;
+package com.lemon.rating.mindrating;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.lemon.rating.rating_app.Fragment;
+package com.lemon.rating.mindrating.Fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.lemon.rating.rating_app.Activity.BaseActivity;
+import com.lemon.rating.mindrating.Activity.BaseActivity;
 
 
 /**

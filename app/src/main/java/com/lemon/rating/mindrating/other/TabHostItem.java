@@ -1,4 +1,4 @@
-package com.lemon.rating.rating_app.other;
+package com.lemon.rating.mindrating.other;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.lemon.rating.rating_app.R;
+import com.lemon.rating.mindrating.R;
 
 
 /**

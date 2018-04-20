@@ -1,20 +1,24 @@
-package com.lemon.rating.rating_app.Fragment;
+package com.lemon.rating.mindrating.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.lemon.rating.rating_app.R;
+import com.lemon.rating.mindrating.R;
 
 
 /**
  * Created by Administrator on 2018/4/19.
  */
 
-public class MainFragment extends BaseFragment {
+public class UserFragment extends BaseFragment {
+
+    public UserFragment() {
+        // Required empty public constructor
+    }
     @Override
     protected View initView(LayoutInflater inflater, ViewGroup container) {
-        View view = inflater.inflate(R.layout.main_fragment, container, false);
+        View view = inflater.inflate(R.layout.user_fragment, container, false);
         return view;
     }
 

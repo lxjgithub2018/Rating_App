@@ -1,4 +1,4 @@
-package com.lemon.rating.rating_app;
+package com.lemon.rating.mindrating;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

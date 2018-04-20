@@ -1,14 +1,14 @@
-package com.lemon.rating.rating_app.Activity;
+package com.lemon.rating.mindrating.Activity;
 
 
 import android.support.v4.app.FragmentTabHost;
 import android.widget.TabHost;
 
 
-import com.lemon.rating.rating_app.Fragment.MainFragment;
-import com.lemon.rating.rating_app.Fragment.UserFragment;
-import com.lemon.rating.rating_app.R;
-import com.lemon.rating.rating_app.other.TabHostItem;
+import com.lemon.rating.mindrating.Fragment.MainFragment;
+import com.lemon.rating.mindrating.Fragment.UserFragment;
+import com.lemon.rating.mindrating.R;
+import com.lemon.rating.mindrating.other.TabHostItem;
 
 import java.util.ArrayList;
 import java.util.List;
