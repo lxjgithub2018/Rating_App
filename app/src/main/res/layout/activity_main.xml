@@ -6,10 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".Activity.MainActivity">
 
+    <!--标题栏-->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_none_back_arrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <android.support.v4.app.FragmentTabHost
         android:id="@android:id/tabhost"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
         android:background="@android:color/white">
 
         <com.zhy.autolayout.AutoLinearLayout

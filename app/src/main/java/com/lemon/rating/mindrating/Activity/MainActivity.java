@@ -1,14 +1,17 @@
 package com.lemon.rating.mindrating.Activity;
 
 
+import android.content.Intent;
 import android.support.v4.app.FragmentTabHost;
+import android.support.v7.app.ActionBar;
+import android.support.v7.widget.Toolbar;
 import android.widget.TabHost;
-
+import android.widget.TextView;
 
 import com.lemon.rating.mindrating.Fragment.MainFragment;
 import com.lemon.rating.mindrating.Fragment.UserFragment;
+import com.lemon.rating.mindrating.Other.TabHostItem;
 import com.lemon.rating.mindrating.R;
-import com.lemon.rating.mindrating.other.TabHostItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,10 +19,23 @@ import java.util.List;
 public class MainActivity extends BaseActivity {
     private List<TabHostItem> mFragmentList;
     private FragmentTabHost mFragmentTabHost;
+    private Toolbar mToolbar;
+    private TextView toolbarTitle;
+    private String userName;
+
 
     @Override
     protected void initView() {
         setContentView(R.layout.activity_main);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar.setTitle("");
+        setSupportActionBar(mToolbar);
+        ActionBar actionBar = getSupportActionBar();
+        if (null != actionBar) {
+            actionBar.setDisplayHomeAsUpEnabled(false);
+        }
+        toolbarTitle = (TextView) findViewById(R.id.toolbar_title);
+        toolbarTitle.setText("项目浏览");
     }
 
     @Override
@@ -29,7 +45,22 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initData() {
+        getLogIntent();
         initTabItemData();
+    }
+
+    /*
+    *获取Intent
+    *
+    * */
+    private void getLogIntent(){
+        //获取传来的intent对象
+        Intent intent = getIntent();
+        //获取键值对的键名
+        userName=intent.getStringExtra("userName");
+    }
+    public String getUserName(){
+        return userName;
     }
 
     /**
@@ -40,23 +71,23 @@ public class MainActivity extends BaseActivity {
         mFragmentList.add(new TabHostItem(
                 R.drawable.icon_caption_normal,
                 R.drawable.icon_caption_selected,
-                this.getResources().getString(R.string.caption_fragment),
+                this.getResources().getString(R.string.main_fragment),
                 MainFragment.class
         ));
 
-        mFragmentList.add(new TabHostItem(
+        /*mFragmentList.add(new TabHostItem(
                 R.drawable.icon_contacts_normal,
                 R.drawable.icon_contacts_selected,
                 this.getResources().getString(R.string.contacts_fragment),
-                UserFragment.class
-        ));
+                FriendsFragment.class
+        ));*/
 
-        mFragmentList.add(new TabHostItem(
+        /*mFragmentList.add(new TabHostItem(
                 R.drawable.icon_more_normal,
                 R.drawable.icon_more_selected,
                 this.getResources().getString(R.string.more_fragment),
-                UserFragment.class
-        ));
+                MoreFragment.class
+        ));*/
 
         mFragmentList.add(new TabHostItem(
                 R.drawable.icon_user_normal,
@@ -103,25 +134,15 @@ public class MainActivity extends BaseActivity {
                         tabItem.setChecked(false);
                     }
                 }
-               /* if(tabId.equals(getResources().getString(R.string.caption_fragment))){
-                    mToolbar.setBackgroundColor(getResources().getColor(R.color.gray1));
-                    search_layout.setVisibility(View.VISIBLE);
-                    toolbarTitle.setVisibility(View.GONE);
-                }else if(tabId.equals(getResources().getString(R.string.home_fragment))){
-                    mToolbar.setBackgroundColor(getResources().getColor(R.color.gray));
-                    search_layout.setVisibility(View.VISIBLE);
-                    toolbarTitle.setVisibility(View.GONE);
+                if(tabId.equals(getResources().getString(R.string.main_fragment))){
+                    toolbarTitle.setText(getResources().getString(R.string.main_fragment));
+                }/*else if(tabId.equals(getResources().getString(R.string.contacts_fragment))){
+                    toolbarTitle.setText(getResources().getString(R.string.contacts_fragment));
                 }else if(tabId.equals(getResources().getString(R.string.more_fragment))){
                     toolbarTitle.setText(getResources().getString(R.string.more_fragment));
-                    mToolbar.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                    search_layout.setVisibility(View.GONE);
-                    toolbarTitle.setVisibility(View.VISIBLE);
-                }else if(tabId.equals(getResources().getString(R.string.user_fragment))){
+                }*/else if(tabId.equals(getResources().getString(R.string.user_fragment))){
                     toolbarTitle.setText(getResources().getString(R.string.user_fragment));
-                    mToolbar.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                    search_layout.setVisibility(View.GONE);
-                    toolbarTitle.setVisibility(View.VISIBLE);
-                }*/
+                }
             }
         });
     }

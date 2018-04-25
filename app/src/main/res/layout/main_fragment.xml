@@ -4,11 +4,73 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/list_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="项目浏览页"
-        android:textSize="35dp"/>
+        android:orientation="vertical"
+        android:visibility="visible">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/gray">
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_shape"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="10px">
+
+        <ImageView
+            android:id="@+id/img_search"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10px"
+            android:background="@drawable/icon_toolbar_search"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/search_textview"
+            android:layout_width="600px"
+            android:layout_height="60px"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="-5px"
+            android:layout_marginStart="-5px"
+            android:layout_toEndOf="@id/img_search"
+            android:layout_toRightOf="@id/img_search"
+            android:background="@null"
+            android:dropDownHeight="wrap_content"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:hint="搜索"
+            android:textColorHint="#707070"
+            android:maxLength="11"
+            android:paddingEnd="5px"
+            android:paddingStart="5px"
+            android:textColor="#707070"
+            android:textSize="14sp" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+        <ImageButton
+            android:id="@+id/img_add"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10px"
+            android:background="@drawable/menu_add_logo"/>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_marginTop="20px"
+        android:layout_width="700px"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+    </ListView>
+
+    </com.zhy.autolayout.AutoLinearLayout>
 
 </com.zhy.autolayout.AutoLinearLayout>

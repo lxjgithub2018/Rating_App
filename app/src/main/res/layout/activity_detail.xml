@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lemon.rating.mindrating.Activity.DetailActivity"
+    android:layout_centerHorizontal="true"
+    android:background="@color/orange_deep">
+
+    <!--标题栏-->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_detil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/deail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:visibility="gone">
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:layout_marginTop="20px"
+        android:background="@drawable/avatar_default_1"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="20px"
+        android:layout_below="@+id/img"
+        android:text="题目：歌唱大赛"/>
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="700px"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="20px"
+        android:layout_below="@+id/title"
+        android:text="我是歌手包括普通赛、复活赛（第二、三、四季为突围赛）、踢馆赛（第三、四季）、半决赛（第一、二季）和歌王之战。第一季和第二季普通赛共分为5轮，每轮演出分两场。每轮有7名歌手参与竞演，在选歌上，除了第一次参赛可以唱自己的代表作，其他一定要翻唱其他歌手的歌曲。每场均有500名观众听审参与表决，500名听审来自五个不同年代，专家顾问只对参演歌手的表现作出点评，并不参与评分和筛选的工作。每次工作人员进行票数计算时，都会有专业的专家进行现场监督，对每位选手的票数都是十分认真负责，杜绝黑幕现象。每位歌手都有一位“经纪人”，“经纪人”一般由湖南卫视主持人担任。歌手被淘汰，相应“经纪人”也被淘汰。另外，节目无固定主持人，主持人一般由参加竞演的某位歌手担任。" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/score_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:visibility="visible">
+
+        <com.lemon.rating.mindrating.Other.MtListView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/lv_player_score"
+            android:layout_width="700px"
+            android:layout_height="wrap_content">
+
+        </com.lemon.rating.mindrating.Other.MtListView>
+
+        <Button
+            android:id="@+id/btn_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:paddingBottom="@dimen/margin_small"
+            android:paddingTop="@dimen/margin_small"
+            android:layout_marginBottom="20px"
+            android:text="评分"
+            android:background="@drawable/btn_orange_selector"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"/>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/commit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:visibility="gone">
+
+        <com.lemon.rating.mindrating.Other.MtListView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/peoject_commit"
+            android:layout_width="700px"
+            android:layout_height="wrap_content">
+
+        </com.lemon.rating.mindrating.Other.MtListView>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20px"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_commit"
+                android:layout_width="550px"
+                android:layout_height="80px"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_tiny"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_toRightOf="@+id/img_pw"
+                android:background="@color/gray"
+                android:hint="发表你的评论吧~"
+                android:maxLines="1"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/tv_gray_deep"
+                android:textSize="@dimen/text_size_normal"/>
+
+            <View
+                android:layout_width="550px"
+                android:layout_height="@dimen/line_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_toRightOf="@+id/img_pw"
+                android:background="@color/orange_light"/>
+
+            <Button
+                android:id="@+id/btn_commit"
+                android:layout_width="120px"
+                android:layout_height="80px"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="13dp"
+                android:layout_marginRight="13dp"
+                android:background="@drawable/btn_orange_selector"
+                android:text="评论"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_medium" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoRelativeLayout>

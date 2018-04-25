@@ -1,4 +1,4 @@
-package com.lemon.rating.mindrating.other;
+package com.lemon.rating.mindrating.Other;
 
 import android.content.Context;
 import android.graphics.Color;

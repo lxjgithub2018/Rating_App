@@ -3,6 +3,10 @@ package com.lemon.rating.mindrating.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
+import com.lemon.rating.mindrating.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,5 +54,35 @@ public abstract class BaseActivity extends AppCompatActivity {
      * 初始化数据
      */
     protected abstract void initData();
+
+
+    /**
+     * 加载头像
+     *
+     * @param image
+     * @param imageView
+     */
+    public void loadAvatar(String image, ImageView imageView) {
+        loadImage(image, imageView, R.drawable.avatar_default_1);
+    }
+
+    /**
+     * 加载图片
+     *
+     * @param image
+     * @param imageView
+     * @param error
+     */
+    public void loadImage(final String image, final ImageView imageView, final int error) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Glide.with(BaseActivity.this).load(image)
+                        .error(error)
+                        .crossFade()
+                        .into(imageView);
+            }
+        });
+    }
 
 }

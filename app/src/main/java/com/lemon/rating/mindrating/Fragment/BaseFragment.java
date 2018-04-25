@@ -11,7 +11,7 @@ import com.lemon.rating.mindrating.Activity.BaseActivity;
 
 
 /**
- * Created by Administrator on 2018/4/19.
+ * Created by Administrator on 2018/2/19.
  */
 
 public abstract class BaseFragment extends Fragment {

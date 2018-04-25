@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lemon.rating.mindrating.Activity.AddActivity"
+    android:orientation="vertical">
+
+    <!--标题栏-->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/add_layout_scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/add_relayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/et_pjname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:hint="项目名称"
+                android:maxLines="1"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/tv_gray_deep"
+                android:textSize="@dimen/text_size_normal"/>
+
+            <EditText
+                android:id="@+id/et_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:layout_below="@+id/et_pjname"
+                android:hint="项目简介"
+                android:maxLines="1"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/tv_gray_deep"
+                android:textSize="@dimen/text_size_normal"/>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/layout_rul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:layout_below="@+id/et_detail">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择评分规则："/>
+
+                <CheckBox
+                    android:id="@+id/ruls_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="十分制"/>
+
+                <CheckBox
+                    android:id="@+id/ruls_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:text="百分制"/>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/layout_player"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:layout_below="@+id/layout_rul">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加选手："/>
+
+                <EditText
+                    android:id="@+id/et_player"
+                    android:layout_width="400px"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入选手名称"
+                    android:maxLines="1"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/tv_gray_deep"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <Button
+                    android:id="@+id/btn_player"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:text="添加"/>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/player_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:layout_below="@+id/layout_player">
+
+                <com.lemon.rating.mindrating.Other.MtListView
+                    android:id="@+id/lv_player"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.lemon.rating.mindrating.Other.MtListView>
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/layout_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:layout_below="@+id/player_layout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加内容："/>
+
+                <EditText
+                    android:id="@+id/et_item"
+                    android:layout_width="400px"
+                    android:layout_height="wrap_content"
+                    android:hint="请输内容"
+                    android:maxLines="1"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/tv_gray_deep"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <Button
+                    android:id="@+id/btn_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:text="添加"/>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/item_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:layout_below="@+id/layout_item">
+
+                <com.lemon.rating.mindrating.Other.MtListView
+                    android:id="@+id/lv_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.lemon.rating.mindrating.Other.MtListView>
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/layout_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:layout_below="@+id/item_layout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加评委："/>
+
+                <EditText
+                    android:id="@+id/et_score"
+                    android:layout_width="400px"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入评委名称"
+                    android:maxLines="1"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/tv_gray_deep"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <Button
+                    android:id="@+id/btn_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:text="添加"/>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/score_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:layout_below="@+id/layout_score">
+
+                <com.lemon.rating.mindrating.Other.MtListView
+                    android:id="@+id/lv_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.lemon.rating.mindrating.Other.MtListView>
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/score_layout"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginRight="@dimen/margin_large"
+                android:paddingBottom="@dimen/margin_small"
+                android:paddingTop="@dimen/margin_small"
+                android:layout_marginTop="20px"
+                android:layout_marginBottom="20px"
+                android:text="创建项目"
+                android:background="@drawable/btn_orange_selector"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_normal"/>
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+    </ScrollView>
+
+</com.zhy.autolayout.AutoRelativeLayout>

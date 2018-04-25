@@ -1,8 +1,24 @@
 <resources>
-    <string name="app_name">Rating_client</string>
+    <string name="app_name">评分App</string>
 
-    <string name="caption_fragment">字幕</string>
-    <string name="contacts_fragment">通讯录</string>
+    <string name="main_fragment">项目浏览</string>
+    <string name="contacts_fragment">朋友</string>
     <string name="more_fragment">更多</string>
-    <string name="user_fragment">我</string>
+    <string name="user_fragment">个人中心</string>
+
+    <string name="account">请输入登录的账号</string>
+    <string name="password">请输入登录密码</string>
+    <string name="textview_password">忘记密码</string>
+    <string name="textview_register">用户注册</string>
+    <string name="login">登录</string>
+    <string name="regist">创建账号</string>
+
+    <string name="regist_username">用户名</string>
+    <string name="regist_password1">登录密码</string>
+    <string name="regist_password2">再次输入密码</string>
+    <string name="regist_phone">电话号码</string>
+    <string name="regist_login">已有账号？马上登录</string>
+
+    <string name="loading">正在加载数据</string>
+
 </resources>
